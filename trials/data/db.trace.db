@@ -1,0 +1,15 @@
+2024-12-18 17:16:49.893626+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DROP [*]* FROM documents"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, AGGREGATE, SYNONYM"; SQL statement:
+DROP * FROM documents [42001-232]
+2024-12-18 17:18:21.660433+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete [*]* from documents"; expected "identifier"; SQL statement:
+delete * from documents [42001-232]
+2024-12-18 17:18:35.430421+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete from documents [*]*"; SQL statement:
+delete from documents * [42000-232]
+2024-12-18 17:19:13.127251+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DOCUMENTS" already exists; SQL statement:
+CREATE TABLE Documents ( id SERIAL PRIMARY KEY, document_type VARCHAR(255) NOT NULL, weight DECIMAL(18, 17) NOT NULL ) [42101-232]
+2024-12-18 17:19:30.876969+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DOCUMENTS" already exists; SQL statement:
+CREATE TABLE Documents ( id SERIAL PRIMARY KEY, document_type VARCHAR(255) NOT NULL, weight DECIMAL(18, 17) NOT NULL ) [42101-232]

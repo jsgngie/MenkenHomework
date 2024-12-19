@@ -1,0 +1,38 @@
+<div class="listContainer">
+    <div class="header">
+        <h2 class="title">Classifications</h2>
+        <div class="filterContainer">
+            <select class="input" [(ngModel)]="filter.documentType" (change)="filterDocuments()">
+              <option value="">All Classifications</option>
+              <option *ngFor="let document of documentNames" [value]="document">{{ document }}</option>
+            </select>
+
+            <div class="probablityFilterContainer">
+                <span>Higher than</span>
+                <input class="input" type="number" min="0" max="100" 
+                [(ngModel)]="filter.probability" (change)="filterDocuments()">
+            </div>
+        </div>
+    </div>
+
+    <div class="listHeaderContainer">
+
+        <div class="listHeader" (click)="sortBy('documentType')">
+          <span>Classification</span>
+          <span *ngIf="sortColumn === 'documentType'" class="arrow">{{ sortDirection ? '↑' : '↓' }}</span>
+        </div>
+
+        <div class="listHeader" (click)="sortBy('weight')">
+          <span>Probability</span>
+          <span *ngIf="sortColumn === 'weight'" class="arrow">{{ sortDirection ? '↑' : '↓' }}</span>
+        </div>
+
+    </div>
+    <ul>
+      <li *ngFor="let document of filteredDocuments">
+        <span class="documentName">{{ document.documentType }}</span>
+        <span class="documentWeight">{{ document.weight * 100 | number:'1.4-4' }}%</span>
+      </li>
+    </ul>
+</div>
+  

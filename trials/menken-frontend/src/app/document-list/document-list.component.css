@@ -1,0 +1,95 @@
+.listContainer {
+    width: 40vw;
+    padding: 20px;
+}
+
+.header {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.listHeader {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.listHeaderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: #7a8699;
+}
+
+.listHeader span {
+    margin-right: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 5px;
+    font-size: 1.2em;
+}
+
+li:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+.documentWeight {
+    font-size: 14px;
+    color: #555;
+}
+
+.documentName {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.probablityFilterContainer {
+    display:flex;
+    align-items: center;
+    flex-wrap:nowrap;
+}
+  
+.filterContainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.input {
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    background: white;
+}
+
+.arrow {
+    color: #a03cfc;
+}
+
+.title {
+    width: fit-content;
+}
+
+@media (max-width: 1670px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
